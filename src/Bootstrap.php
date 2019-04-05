@@ -31,6 +31,7 @@ class Bootstrap
             self::replaceNamespace($pathname, $ns);
         }
         self::replaceNamespace(__DIR__.'/../configuration.php', $ns);
+        self::replaceNamespace(__DIR__.'/../composer.json', $ns);
 
         $climate->darkGray('Initializing configuration...');
         $climate->white('We ignored `configuration.php`, and copied it to `configuration.dist.php`, which should be the configuration you distribute. feel free to adjust this yourself');
