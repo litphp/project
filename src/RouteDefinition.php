@@ -1,10 +1,10 @@
 <?php
 
-namespace Project;
+namespace NewProject;
 
 use FastRoute\RouteCollector;
 use Lit\Router\FastRoute\FastRouteDefinition;
-use Project\Action\HomeAction;
+use NewProject\Action\HomeAction;
 
 class RouteDefinition extends FastRouteDefinition
 {

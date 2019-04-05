@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Project;
+namespace NewProject;
 
 use League\CLImate\CLImate;
 
@@ -51,7 +51,7 @@ class Bootstrap
     public static function replaceNamespace(string $pathname, string $name)
     {
         $content = file_get_contents($pathname);
-        $content = strtr($content, ['Project' => trim($name, "\\ ")]);
+        $content = strtr($content, ['NewProject' => trim($name, "\\ ")]);
         file_put_contents($pathname, $content);
     }
 }

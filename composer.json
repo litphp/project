@@ -14,14 +14,14 @@
     },
     "autoload": {
         "psr-4": {
-            "Project\\": "src/"
+            "NewProject\\": "src/"
         }
     },
     "prefer-stable": true,
     "minimum-stability": "dev",
     "scripts": {
         "post-create-project-cmd": [
-            "Project\\Bootstrap::postCreateProject",
+            "NewProject\\Bootstrap::postCreateProject",
             "@composer dump-autoload"
         ]
     },

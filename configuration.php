@@ -6,9 +6,9 @@ $configuration = [];
 
 $configuration += [
     \Lit\Core\Interfaces\RouterStubResolverInterface::class => C::instance(\Lit\Bolt\Router\BoltStubResolver::class, [
-        'notFound' => \Project\Action\NotFoundAction::class
+        'notFound' => \NewProject\Action\NotFoundAction::class
     ])
 ];
-$configuration += \Lit\Router\FastRoute\FastRouteConfiguration::default(C::produce(\Project\RouteDefinition::class));
+$configuration += \Lit\Router\FastRoute\FastRouteConfiguration::default(C::produce(\NewProject\RouteDefinition::class));
 
 return $configuration;

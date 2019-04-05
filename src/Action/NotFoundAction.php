@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Project\Action;
+namespace NewProject\Action;
 
-use Project\BaseAction;
+use NewProject\BaseAction;
 use Psr\Http\Message\ResponseInterface;
 use Zend\Diactoros\Response\HtmlResponse;
 

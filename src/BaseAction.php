@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Project;
+namespace NewProject;
 
 use Lit\Bolt\BoltAbstractAction;
 
