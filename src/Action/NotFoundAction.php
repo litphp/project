@@ -17,8 +17,8 @@ class NotFoundAction extends BaseAction
 <hr>
 <h3>How to create a new page</h3>
 <ol>
-<li>create an action class <code>Project\Action\YourAction</code></li>
-<li>register it to router in <code>Project\RouteDefinition</code></li>
+<li>create an action class <code>NewProject\Action\YourAction</code></li>
+<li>register it to router in <code>NewProject\RouteDefinition</code></li>
 </ol>
 </body>
 </html>

@@ -31,7 +31,7 @@ class Bootstrap
             self::replaceNamespace($pathname, $ns);
         }
         self::replaceNamespace(__DIR__.'/../configuration.php', $ns);
-        self::replaceNamespace(__DIR__.'/../composer.json', $ns);
+        self::replaceNamespace(__DIR__.'/../composer.json', addslashes($ns));
 
         $climate->darkGray('Initializing configuration...');
         $climate->white('We ignored `configuration.php`, and copied it to `configuration.dist.php`, which should be the configuration you distribute. feel free to adjust this yourself');
@@ -39,7 +39,7 @@ class Bootstrap
         file_put_contents(__DIR__.'/../.gitignore', "/configuration.php\n", FILE_APPEND);
         unlink(__FILE__);
         $climate->green("We've done. Run next command in your shell & browse http://127.0.0.1:3080/ to check installation. Good luck!");
-        $climate->white("php -S 127.0.0.1:3080 public/index.php");
+        $climate->white(sprintf("cd %s && php -S 127.0.0.1:3080 public/index.php", dirname(__DIR__)));
     }
 
     protected static function isValidClassName(string $name): bool
