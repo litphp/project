@@ -11,6 +11,7 @@ class Bootstrap
     public static function postCreateProject()
     {
         $climate = new CLImate();
+        $climate->forceAnsiOn();
         $ns = '';
         while (!self::isValidClassName($ns)) {
             $ns = $climate->input("Input your project namespace")->prompt();
