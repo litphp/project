@@ -9,9 +9,9 @@
         }
     ],
     "require": {
-        "litphp/bolt": "^0.9.0@dev",
-        "litphp/router-fast-route": "^0.9.0@dev",
-        "litphp/runner-zend-sapi": "^0.9.0@dev"
+        "litphp/bolt": "^0.9",
+        "litphp/router-fast-route": "^0.9",
+        "litphp/runner-zend-sapi": "^0.9"
     },
     "autoload": {
         "psr-4": {

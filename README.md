@@ -8,4 +8,3 @@ LitPHP
 --------------
 
 A boilerplate of a typical LitPHP application
-
