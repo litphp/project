@@ -17,7 +17,10 @@ class NotFoundAction extends BaseAction
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.css'>
 </head>
 <body>
-<h1>404 Not Found</h1>
+<h1>
+    404 Not Found
+    <small style="color: silver">%s</small>
+</h1>
 <hr>
 <h3>How to create a new page <sup style="opacity: .7"><em>Bonus!</em></sup></h3>
 <ol>
@@ -30,6 +33,8 @@ HTML;
 
     protected function main(): ResponseInterface
     {
-        return new HtmlResponse(self::SOURCE, 404);
+        $path = $this->request->getUri()->getPath();
+        
+        return new HtmlResponse(sprintf(self::SOURCE, $path), 404);
     }
 }
