@@ -63,7 +63,7 @@ class Bootstrap
     public static function replaceNamespace(string $pathname, string $name)
     {
         $content = file_get_contents($pathname);
-        assert($content);
+        assert(is_string($content));
         $content = strtr($content, ['NewProject' => trim($name, "\\ ")]);
         file_put_contents($pathname, $content);
     }
